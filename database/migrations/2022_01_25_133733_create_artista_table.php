@@ -16,7 +16,12 @@ class CreateArtistaTable extends Migration
         Schema::create('artista', function (Blueprint $table) {
             $table->id();
 
-            $table->string('nome');
+            $table->bigInteger('album_id');
+            $table->string('nome',60);
+            $table->string('cognome',60);
+            $table->smallInteger('eta');
+            $table->string('genere_musicale',60);
+            $table->text('descrizione_artista');
 
             $table->timestamps();
         });
