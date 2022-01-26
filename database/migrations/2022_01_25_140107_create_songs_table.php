@@ -16,10 +16,12 @@ class CreateSongsTable extends Migration
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('album_id');
-            $table->string('nome');
-            $table->time('time');
+            /* $table->bigInteger('album_id'); */
+            $table->string('nome',60);
+            $table->Integer('time[s]');
             $table->text('testo');
+            $table->Integer('price[c]');
+            $table->string('genre',60);
             
             $table->timestamps();
         });
